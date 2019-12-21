@@ -1,0 +1,1355 @@
+body {
+  padding: 0;
+  margin: 0px;
+  font-family: "Open Sans", sans-serif;
+  background-color: whitesmoke;
+}
+
+body * {
+  /* float: left; */
+  box-sizing: border-box;
+}
+* {
+  box-sizing: border-box;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: black;
+}
+
+span {
+  font-family: sans-serif;
+}
+/*
+    May need to edit selector
+*/
+.modal {
+  position: fixed;
+  display: none;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  overflow: auto !important;
+}
+
+#modal-error {
+  padding: 0 30px;
+}
+
+.error {
+  color: red;
+}
+
+form {
+  width: 100%;
+  padding: 20px 0;
+  background-color: white;
+  border-top: solid navy 1px;
+}
+
+/*
+    Nav styles
+*/
+nav {
+  box-shadow: 0px 3px 10px #626868;
+  width: 100%;
+  background-color: #fcfcfc;
+  display: flex !important;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 20px 40px;
+  z-index: 1;
+  position: relative;
+}
+
+.large-text {
+  color: #626868;
+}
+
+.center {
+  position: relative;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+button {
+  border: none;
+  padding: 10px 5px;
+  border-radius: 5px;
+}
+
+button:hover,
+*[class*="exit"]:hover {
+  cursor: pointer;
+}
+
+.row,
+hr {
+  width: 100%;
+}
+
+*[class*="exit"] {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+#modal-card {
+  background-color: white;
+  width: 70%;
+  height: 90%;
+}
+
+#crewReg-modal {
+}
+
+#modal-header {
+  padding: 10px 20px;
+}
+
+.row span:nth-child(2) {
+  float: right;
+}
+.brand span {
+  font-weight: bold;
+  font-size: 200%;
+}
+
+.brand span:first-child {
+  color: navy;
+}
+
+.brand span:last-child {
+  color: red;
+}
+
+.bullet-point {
+  height: 10px;
+  width: 10px;
+  background-color: navy;
+  margin-right: 10px;
+}
+
+.template-heading {
+  font-size: 140%;
+  color: navy;
+}
+
+#brand-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reveal-nav-element {
+  display: flex !important;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+#link-div,
+#action-div {
+  display: none;
+  padding: 10px 0;
+}
+
+#action-div a {
+  text-decoration: none;
+  padding: 10px 20px 10px 10px;
+  color: navy;
+  font-weight: bold;
+  margin-right: 5px;
+  border-bottom: solid medium transparent;
+  width: 100%;
+}
+
+.dropbtn {
+  background-color: #fff;
+  color: navy;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 90%;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* .dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+} */
+
+#link-div a {
+  text-decoration: none;
+  padding: 10px 20px 10px 0;
+  color: navy;
+  font-weight: bold;
+  margin-right: 5px;
+  border-bottom: solid medium transparent;
+}
+
+#link-div a:hover {
+  border-bottom: #bb0a21 solid medium;
+}
+
+.show {
+  display: block !important;
+}
+#loginBtn {
+  background-color: navy;
+}
+
+#contact {
+  width: 100%;
+  font-size: 130%;
+}
+
+.contact-button {
+  width: 100%;
+}
+#contact-us {
+  width: 100%;
+  background-color: white;
+  display: none;
+  box-shadow: 0px 3px 10px #626868;
+}
+
+#contact-us-container {
+  position: relative;
+  background-color: navy;
+  width: 100%;
+}
+
+#contact {
+  padding: 20px;
+}
+
+#contact-form {
+  padding: 20px;
+  width: 100%;
+}
+
+#send {
+  margin-top: 5px;
+}
+
+#contact-form label {
+  margin-top: 10px;
+}
+#contact-form input,
+#contact-us label {
+  width: 100%;
+}
+
+.contact-us {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: auto;
+}
+
+#loginBtn,
+#logout,
+#nav-button,
+#contact {
+  color: white;
+  padding: 10px 20px;
+}
+
+#logout,
+#nav-button,
+#contact {
+  background-color: #bb0a21;
+}
+
+.template {
+  width: 500px;
+  background-color: white;
+  box-shadow: 0px 3px 10px #626868;
+  margin: 10px;
+}
+
+.template-button {
+  padding: 7px 20px;
+  background-color: #bb0a21;
+  color: white;
+}
+
+.template-body .row {
+  color: #4c5b61;
+  padding: 10px;
+}
+
+.row {
+  margin: 0 !important;
+
+}
+
+.template-header {
+  width: 100%;
+  padding: 20px;
+  font-size: 130%;
+  color: white;
+  background-color: navy;
+}
+
+.template-header span:nth-child(2) {
+  float: right;
+}
+.template-body {
+  width: 100%;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.template-2 {
+  width: 100%;
+  background-color: white;
+}
+
+.form-header,
+.form-header-small {
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.form-header {
+  text-transform: uppercase;
+  font-size: 160%;
+  color: navy;
+}
+.form-header-small {
+  font-size: 110%;
+  color: #0e34a0;
+}
+
+.form-button {
+  background-color: navy;
+  transition: 0.2s;
+  color: white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  margin: 20px 0;
+  float: right;
+}
+
+.picture-container {
+  background-image: url(images/backgrounds/form-background2.jpg);
+}
+
+.picture-container .template {
+  height: 300px;
+}
+
+.picture-container .template-body {
+  font-size: 110%;
+  font-weight: bold;
+}
+
+.picture-container,
+.form-container {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  background-image: url(images/backgrounds/form-background2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form-button:hover {
+  transform: scale(1.1);
+}
+
+.form-header-container span[class*="form-header"] {
+  width: 100%;
+}
+.form-header-container {
+  padding: 0 20px;
+  width: 100%;
+}
+form[id*="form"] hr {
+  background-color: #0e34a0;
+  height: 1.5px;
+}
+.summary-header {
+  font-size: 120%;
+  color: gray;
+}
+
+.form-container .template-body {
+  padding: 30px 20px 20px 20px;
+}
+
+form input,
+form select {
+  border-radius: 5px;
+  background-color: whitesmoke;
+  border: none;
+  padding: 5px;
+  margin-top: 5px;
+  height: 30px;
+}
+
+form p {
+  font-weight: bold;
+  color: black;
+}
+
+input[type="radio"] {
+  -webkit-appearance: checkbox; /* Chrome, Safari, Opera */
+  -moz-appearance: checkbox; /* Firefox */
+  -ms-appearance: checkbox; /* not currently supported */
+}
+
+.parallax-image {
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/backgrounds/background2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#Bookings-div {
+  padding: 40px;
+}
+
+#bookings-div-heading hr {
+  background-color: #bb0a21;
+}
+
+#booking-item-header hr {
+  background-color: gray;
+  height: 1px;
+  border: none;
+}
+
+#small-text {
+  font-size: 80%;
+}
+
+.booking-item-header {
+  font-size: 140%;
+  width: 100%;
+  color: navy;
+}
+
+.icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.booking-item-button-div button {
+  color: white;
+  background-color: #bb0a21;
+  transition: 0.2s;
+  text-transform: uppercase;
+}
+.booking-item-button-div button:hover {
+  transform: scale(1.1);
+}
+
+.booking-item-header span:nth-child(2) {
+  float: right;
+}
+
+.booking-item {
+  padding: 20px 20px 20px 0;
+}
+
+.booking-item-container {
+  width: 100%;
+  padding: 20px 20px 20px 0;
+  min-height: 150px;
+  max-height: 220px;
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  margin: 20px 0;
+}
+
+.booking-item-button-div {
+  width: 100%;
+  padding-right: 20px;
+}
+
+.booking-item-text {
+  font-size: 90%;
+  color: #4c5b61;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+#advert {
+  box-shadow: 0px 3px 10px #626868;
+  padding: 10px;
+}
+
+.centered .row {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#advert img {
+  width: 100px;
+}
+
+.step-heading {
+  font-family: sans-serif;
+  letter-spacing: -1.5px;
+  font-size: 150%;
+  font-weight: bold;
+  color: #bb0a21;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  text-decoration: underline;
+}
+
+.step-icon {
+  margin: 20px;
+  width: 60px;
+}
+
+.content .row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.row .step span {
+  width: calc(100% - 100px);
+  font-weight: bold;
+}
+
+#advert hr {
+  background-color: lightgray;
+}
+
+#advert .row:first-of-type span {
+  font-family: sans-serif;
+  letter-spacing: -3px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  font-size: 220%;
+}
+
+#advert .row:nth-of-type(2) span {
+  font-size: 100%;
+  letter-spacing: -1px;
+  color: white;
+}
+
+.filter {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.heading {
+  color: #bb0a21;
+  font-size: 200%;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.form-segment,
+.radio-div {
+  width: 100%;
+  padding: 10px 0;
+}
+.radio-div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+
+.large {
+  justify-content: flex-start;
+}
+
+.large .container {
+  flex: 20%;
+  box-sizing: content-box;
+}
+
+/* Customize the label (the container) */
+/*checkboxes styling*/
+.container {
+  display: inline;
+  position: relative;
+  padding-left: 35px !important;
+  margin-bottom: 12px;
+  margin-left: 0 !important;
+  margin-right: 20px;
+  cursor: pointer;
+  border: solid white 1px;
+  font-size: 100%;
+  background-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 0;
+  border-radius: 5px;
+  transform: translate(0, -50%);
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+}
+
+.checkmark span {
+  position: relative;
+  top: 50%;
+  font-size: 10px;
+  transform: translate(0, -50%);
+  color: white;
+  display: none;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: blue;
+}
+
+.container input:checked ~ .checkmark span {
+  display: block;
+}
+.test {
+  height: 1000px;
+  width: 10px;
+
+  background-color: red;
+}
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.booking-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  transition: 0.2s;
+}
+
+.booking-button:hover {
+  transform: scale(1.1);
+}
+
+.booking-container {
+  display: flex;
+  width: 100%;
+  max-height: calc(100vh - 70px);
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  overflow: auto;
+  padding: 20px;
+  height: 100vh;
+}
+
+#about-us::-webkit-scrollbar {
+  display: none;
+}
+
+#about-us {
+  padding: 50px;
+  color: white;
+  position: absolute;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+#about-us h1 {
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.form-row {
+  width: 100%;
+  padding: 10px 20px;
+}
+#login {
+  width: 100%;
+  padding: 0px 20px;
+  border: none;
+}
+
+#login .form-row {
+  width: 100%;
+  padding: 0;
+}
+
+#modal-header {
+  color: navy;
+  font-size: 130%;
+}
+
+#login input {
+  width: 100%;
+}
+.modal-message {
+  width: 100%;
+}
+.form-row label,
+.form-row input,
+.form-row select {
+  width: 100%;
+}
+
+.form-row .container {
+  width: 0;
+}
+
+.subform {
+  width: 100%;
+  display: none;
+}
+
+textarea {
+  width: 100%;
+}
+
+#booking-items {
+  display: flex;
+  flex-direction: start;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+}
+
+.small-header {
+  font-size: 120%;
+}
+
+.subform hr {
+  background-color: black;
+}
+
+.invoice {
+  border: 1px solid red;
+  padding: 10px;
+  width: 100%;
+}
+.price-box .row {
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.price-box .row span:last-child {
+  color: green;
+}
+.price-row span:last-child {
+  width: 100%;
+  float: right !important;
+}
+
+.price-box {
+}
+.invoice-container {
+  padding: 20px;
+}
+
+.invoice-header,
+.price-box {
+  width: 100%;
+}
+
+.invoice-header {
+  text-align: center;
+  font-family: monospace;
+  text-transform: uppercase;
+}
+
+.invoice-header * {
+  float: none;
+}
+
+#service-header {
+  color: #bb0a21;
+  font-weight: bold;
+  padding: 20px 40px;
+  text-transform: uppercase;
+}
+
+#modal-message,
+.modal-message {
+  padding: 10px;
+}
+
+/* .error{
+    background-color: rgba(255,0,0,0.3);
+} */
+
+#timeline {
+  padding-bottom: 200px !important;
+}
+
+#timeline,
+#how-it-works {
+  background-color: #3066be;
+}
+
+#how-it-works {
+  padding: 30px 0 0px 60px;
+  color: white;
+  text-transform: uppercase;
+  padding: 20px 5px;
+  text-align: center;
+}
+
+#howItWorks {
+  background-color: #bb0a21;
+  color: white;
+  font-weight: bold;
+  font-family: monospace;
+  margin-top: 10px;
+  padding: 10px 20px;
+}
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.containers {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.timeline * {
+  float: none !important;
+}
+
+#details-container {
+  width: 100%;
+  padding: 50px 0;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+#services-section {
+  width: 100%;
+  display: flex;
+  padding: 40px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+#service-header {
+  padding: 20px 5px;
+  text-align: center;
+}
+
+.service-item {
+  flex: 0 0 100%;
+  padding: 0px 60px 30px 0;
+  margin-bottom: 20px;
+}
+
+.service-item {
+  font-weight: bold;
+}
+
+.service-item hr {
+  background-color: #bb0a21;
+}
+
+#bookings-div-heading {
+  width: 100%;
+  text-align: center;
+  color: #bb0a21;
+  font-weight: bold;
+  padding: 20px 40px;
+  text-transform: uppercase;
+}
+
+.image-div {
+  width: 100%;
+  height: 300px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 15px;
+  box-shadow: 0px 3px 10px #626868;
+}
+
+.service-heading {
+  float: none !important;
+  color: #bb0a21;
+  font-family: sans-serif;
+  letter-spacing: -2px;
+  font-size: 200%;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.info-box {
+  flex: 0 0 100%;
+  padding: 0px 40px;
+}
+
+.info-box hr {
+  background-color: white;
+}
+
+.info-box h3 {
+  text-transform: uppercase;
+}
+
+.info-box * {
+  float: none !important;
+}
+
+/* The circles on the timeline */
+.containers::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid red;
+  top: 15px;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Carousel styling */
+.carousel {
+  /* position: absolute !important; */
+  width: 100%;
+  position: inherit !important;
+}
+
+.carousel-control::before {
+  content: none !important;
+}
+
+.carousel-control.left {
+  background-image: none !important;
+}
+
+.carousel-control.right {
+  background-image: none !important;
+}
+
+.carousel-control-container {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 50px;
+}
+
+.carousel-control-container div {
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel-indicators li {
+  border: 1px solid navy !important;
+}
+
+.carousel-indicators li.active {
+  background-color: navy;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+  .service-item {
+    padding: 0;
+  }
+
+  #services-section {
+    padding: 20px;
+  }
+
+  #Bookings-div {
+    padding: 20px;
+  }
+
+  nav {
+    padding: 20px 5px;
+  }
+
+  #about-us {
+    padding: 20px;
+  }
+
+  .info-box {
+    padding: 0px 20px;
+  }
+  /* Full-width containers */
+  .containers {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .containers::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+/*
+    Media queries
+*/
+
+@media screen and (min-width: 600px) {
+  #modal-card {
+    width: 60%;
+  }
+
+  .template {
+    width: 600px;
+  }
+
+  #contact-us-container {
+    padding: 20px 0;
+  }
+}
+@media screen and (min-width: 700px) {
+  #modal-card {
+    width: 55%;
+  }
+  .template {
+    width: 310px;
+  }
+  #bookings-div-heading {
+    width: 100%;
+  }
+  .booking-item-container {
+    flex: 0 0 50%;
+  }
+
+  .service-item {
+    flex: 0 0 50%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #modal-card {
+    width: 50%;
+  }
+
+  #nav-button {
+    display: none;
+  }
+  #action-div,
+  #link-div {
+    display: flex;
+  }
+
+  .text {
+    width: 70%;
+    float: none;
+  }
+
+  #link-div {
+    justify-content: center;
+  }
+
+  #action-div {
+    justify-content: flex-end;
+  }
+
+  #timeline {
+    padding: 20px;
+  }
+  nav {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  form {
+    width: 80%;
+    border: none;
+  }
+
+  #booking-container {
+    padding: 30px;
+  }
+
+  .template {
+    width: 400px;
+    margin: 30px 20px;
+  }
+  .template-2 {
+    box-shadow: 0px 3px 10px #626868;
+  }
+
+  .booking {
+    padding: 20px 50px;
+  }
+  form[id*="form"] {
+    box-shadow: 0px 3px 10px #626868;
+  }
+
+  .form-row {
+    width: 50%;
+  }
+
+  #details-container {
+    width: calc(100% - 500px);
+  }
+
+  .info-box {
+    flex: 0 0 33.333%;
+  }
+
+  .contact-us {
+    display: inherit;
+    width: 400px;
+    bottom: 50%;
+    right: 50px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #modal-card {
+    width: 40%;
+  }
+
+  
+
+  .text {
+    width: 60%;
+  }
+
+  #timeline {
+    padding: 25px;
+  }
+
+  #right-nav button:last-child {
+    display: none;
+  }
+
+  #left-nav {
+    width: 20%;
+  }
+
+  #right-nav {
+    width: 20%;
+  }
+
+  #center-nav {
+    width: 60%;
+    display: inherit;
+  }
+
+  .booking-item-container {
+    flex: 0 0 33%;
+  }
+
+  form {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  #modal-card {
+    width: 30%;
+  }
+  form {
+    width: 50%;
+  }
+  .booking {
+    padding: 20px 200px;
+  }
+
+  .service-item {
+    flex: 0 0 33.333%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+
+  .booking-item-container {
+    flex: 0 0 25%;
+  }
+
+  #modal-card {
+    width: 25%;
+  }
+
+  #timeline {
+    padding: 40px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .booking-item-container {
+    flex: 0 0 20%;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  #timeline {
+    padding: 40px 60px;
+  }
+}
