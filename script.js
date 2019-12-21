@@ -98,22 +98,10 @@ $(".form-button").click(function(event) {
 
       success: async data => {
         const resData = JSON.parse(data);
-        console.log("Login data: " +data);
+
         if (resData.result === "success" && target === "Login") {
           if (resData.type === "Admin") {
-            $.ajax({
-              type: "POST",
-              url: URL,
-              data: {
-                request_type: "get",
-                target: "TestGet"
-              },
-
-              success: data => {
-                console.log(JSON.parse(data));
-              }
-            });
-            //window.location.replace("?page=Admin-dashboard");
+            window.location.replace("?page=Admin-dashboard");
           } else if (resData.type === "Customer") {
             window.location.replace("?page=Customer-dashboard");
           } else if (resData.type === "Crew") {
@@ -144,21 +132,38 @@ $(".form-button").click(function(event) {
   }
 });
 
-// $("#bookingMoreBtn").click(() => {
-//   var accountType = $(location)
-//     .attr("search")
-//     .split("-")[0]
-//     .split("=")[1];
+$(document).ready(() => {
+  var accountType = $(location)
+    .attr("search")
+    .split("-")[0]
+    .split("=")[1];
 
-//   if (
-//     $(location)
-//       .attr("search")
-//       .includes("dashboard")
-//   ) {
+  if (
+    $(location)
+      .attr("search")
+      .includes("dashboard")
+  ) {
+    $.ajax({
+      type: "POST",
+      url: URL,
+      data: {
+        request_type: "get",
+        target:
+          accountType === "Admin"
+            ? "Customers"
+            : accountType === "Crew"
+            ? "Jobs"
+            : accountType === "Customer"
+            ? "MyBookings"
+            : null
+      },
 
-//     });
-//   }
-// });
+      success: function(data) {
+        console.log(data);
+      }
+    });
+  }
+});
 
 /*
     function that collects data and stores it into a JSOn object string

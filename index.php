@@ -1,7 +1,6 @@
 <?php
 ini_set('open_basedir', "../../");
 include("views/header.php");
-session_start();
 
 if ($_GET['page'] == "Admin-dashboard") {
 
